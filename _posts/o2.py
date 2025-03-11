@@ -4,7 +4,7 @@ def remove_posts_prefix(file_path):
         lines = file.readlines()
 
     # Przetwarzamy linie, usuwając "/_posts" z każdej
-    updated_lines = [line.replace(')', '.html)') for line in lines]
+    updated_lines = [line.replace('site.baseurl)', 'site.baseurl') for line in lines]
 
     # Zapisujemy zmieniony tekst do tego samego pliku
     with open(file_path, 'w', encoding='utf-8') as file:
